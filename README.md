@@ -18,3 +18,7 @@ $   sudo cp seba /usr/share/X11/xkb/symbols/
             </languageList>
           </configItem>
         </layout>"
+
+3. Logout login.
+
+4. Choose Seba from "text entry settings"/keyboard layouts

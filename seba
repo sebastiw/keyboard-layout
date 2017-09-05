@@ -4,55 +4,68 @@ xkb_symbols "seba" {
 
     name[Group1]= "Seba";
 
-    key <TLDE> {	[     grave,	asciitilde	]	};
-    key <AE01> {	[	  1,	exclam 		]	};
-    key <AE02> {	[	  2,	at		]	};
-    key <AE03> {	[	  3,	numbersign,	sterling	]	};
-    key <AE04> {	[	  4,	dollar		]	};
-    key <AE05> {	[	  5,	percent		]	};
-    key <AE06> {	[	  6,	asciicircum	]	};
-    key <AE07> {	[	  7,	ampersand	]	};
-    key <AE08> {	[	  8,	asterisk	]	};
-    key <AE09> {	[	  9,	parenleft	]	};
-    key <AE10> {	[	  0,	parenright	]	};
-    key <AE11> {	[     minus,	underscore	]	};
-    key <AE12> {	[     equal,	plus		]	};
+    key <TLDE> {[   grave,	asciitilde,	grave,		asciitilde	]};
+    key <AE01> {[	1,	exclam,		1,		exclam 		]};
+    key <AE02> {[	2,	at,		2,		at		]};
+    key <AE03> {[	3,	numbersign,	sterling,	numbersign	]};
+    key <AE04> {[	4,	dollar,		4,		dollar		]};
+    key <AE05> {[	5,	percent,	5,		percent		]};
+    key <AE06> {[	6,	asciicircum,	6,		asciicircum	]};
+    key <AE07> {[	7,	ampersand,	7,		ampersand	]};
+    key <AE08> {[	8,	asterisk,	8,		asterisk	]};
+    key <AE09> {[	9,	parenleft,	9,		parenleft	]};
+    key <AE10> {[	0,	parenright,	0,		parenright	]};
+    key <AE11> {[   minus,	underscore,	minus,		underscore	]};
+    key <AE12> {[   equal,	plus,		equal,		plus		]};
 
-    key <AD01> {	[	  q,	Q 		]	};
-    key <AD02> {	[	  w,	W		]	};
-    key <AD03> {	[	  e,	E,		EuroSign	]	};
-    key <AD04> {	[	  r,	R		]	};
-    key <AD05> {	[	  t,	T		]	};
-    key <AD06> {	[	  y,	Y		]	};
-    key <AD07> {	[	  u,	U,		udiaeresis,	Udiaeresis	]	};
-    key <AD08> {	[	  i,	I		]	};
-    key <AD09> {	[	  o,	O		]	};
-    key <AD10> {	[	  p,	P		]	};
-    key <AD11> {	[ bracketleft,	braceleft,	aring,		Aring		]	};
-    key <AD12> {	[ bracketright,	braceright,	asterisk	]	};
+    key <AD01> {[	q,	Q,		q,		Q 		]};
+    key <AD02> {[	w,	W,		w,		W		]};
+    key <AD03> {[	e,	E,		EuroSign,	E		]};
+    key <AD04> {[	r,	R,		r,		R		]};
+    key <AD05> {[	t,	T,		t,		T		]};
+    key <AD06> {[	y,	Y,		y,		Y		]};
+    key <AD07> {[	u,	U,		udiaeresis,	Udiaeresis	]};
+    key <AD08> {[	i,	I,		i,		I		]};
+    key <AD09> {[	o,	O,		o,		O		]};
+    key <AD10> {[	p,	P,		p,		P		]};
+    key <AD11> {[ bracketleft,	braceleft,	aring,		Aring		]};
+    key <AD12> {[ bracketright,	braceright,	asterisk,	braceright	]};
 
-    key <AC01> {	[	  a,	A		]	};
-    key <AC02> {	[	  s,	S,	ssharp		]	};
-    key <AC03> {	[	  d,	D		]	};
-    key <AC04> {	[	  f,	F		]	};
-    key <AC05> {	[	  g,	G		]	};
-    key <AC06> {	[	  h,	H		]	};
-    key <AC07> {	[	  j,	J		]	};
-    key <AC08> {	[	  k,	K		]	};
-    key <AC09> {	[	  l,	L		]	};
-    key <AC10> {	[ semicolon,	colon,		odiaeresis,	Odiaeresis	]	};
-    key <AC11> {	[ apostrophe,	quotedbl,	adiaeresis,	Adiaeresis	]	};
+    key <AC01> {[	a,	A,		a,		A		]};
+    key <AC02> {[	s,	S,		ssharp,		S		]};
+    key <AC03> {[	d,	D,		d,		D		]};
+    key <AC04> {[	f,	F,		f,		F		]};
+    key <AC05> {[	g,	G,		g,		G		]};
+    key <AC06> {[	h,	H,		h,		H		]};
+    key <AC07> {[	j,	J,		j,		J		]};
+    key <AC08> {[	k,	K,		k,		K		]};
+    key <AC09> {[	l,	L,		l,		L		]};
+    key <AC10> {[ semicolon,	colon,		odiaeresis,	Odiaeresis	]};
+    key <AC11> {[ apostrophe,	quotedbl,	adiaeresis,	Adiaeresis	]};
 
-    key <AB01> {	[	  z,	Z 		]	};
-    key <AB02> {	[	  x,	X		]	};
-    key <AB03> {	[	  c,	C		]	};
-    key <AB04> {	[	  v,	V		]	};
-    key <AB05> {	[	  b,	B		]	};
-    key <AB06> {	[	  n,	N		]	};
-    key <AB07> {	[	  m,	M		]	};
-    key <AB08> {	[     comma,	less		]	};
-    key <AB09> {	[    period,	greater		]	};
-    key <AB10> {	[     slash,	question	]	};
+    key <AB01> {[	z,	Z,		z,		Z		]};
+    key <AB02> {[	x,	X,		x,		X		]};
+    key <AB03> {[	c,	C,		c,		C		]};
+    key <AB04> {[	v,	V,		v,		V		]};
+    key <AB05> {[	b,	B,		b,		B		]};
+    key <AB06> {[	n,	N,		n,		N		]};
+    key <AB07> {[	m,	M,		m,		M		]};
+    key <AB08> {[   comma,	less,		comma,		less		]};
+    key <AB09> {[  period,	greater,	period,		greater		]};
+    key <AB10> {[   slash,	question,	slash,		question	]};
 
-    key <BKSL> {	[ backslash,	bar		]	};
+    key <BKSL> {[ backslash,	bar,		backslash,	bar		]};
+
+
+    include "level5(lock)"
+
+    // CapsLock chooses 5th level, latches (temp lock) when
+    // pressed with another 5th-level-chooser
+    key <LSGT> {
+        type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK",
+        symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift,
+                            ISO_Level5_Shift, ISO_Level5_Shift,
+                            ISO_Level5_Lock, ISO_Level5_Lock,
+                            ISO_Level5_Lock, ISO_Level5_Lock ]
+    };
 };

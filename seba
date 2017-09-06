@@ -1,8 +1,8 @@
 default
 partial alphanumeric_keys modifier_keys
-xkb_symbols "seba" {
+xkb_symbols "seba_base" {
 
-    name[Group1]= "Seba";
+    key.type[Group1] = "EIGHT_LEVEL";
 
     key <TLDE> {[   grave,	asciitilde,	grave,		asciitilde,	Cyrillic_io,		Cyrillic_IO	]};
     key <AE01> {[	1,	exclam,		1,		exclam 		]};
@@ -55,17 +55,18 @@ xkb_symbols "seba" {
     key <AB10> {[   slash,	question,	slash,		question	]};
 
     key <BKSL> {[ backslash,	bar,		backslash,	bar		]};
-
-
-    include "level5(lock)"
-
-    // CapsLock chooses 5th level, latches (temp lock) when
-    // pressed with another 5th-level-chooser
-    key <LSGT> {
-        type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK",
-        symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift,
-                            ISO_Level5_Shift, ISO_Level5_Shift,
-                            ISO_Level5_Lock, ISO_Level5_Lock,
-                            ISO_Level5_Lock, ISO_Level5_Lock ]
-    };
 };
+
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "seba" {
+
+    include "seba(seba_base)"
+
+    name[Group1]= "Seba";
+
+    include "ctrl(nocaps)"
+    include "level3(ralt_switch)"
+    include "level5(lsgt_switch)"
+};
+

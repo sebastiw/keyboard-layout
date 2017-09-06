@@ -1,17 +1,24 @@
 About
 ===
 This keyboard layout is based on the US layout, but with some special keys:
-Swedish åäö on altgr+[';
-German üß on altgr+us
-UK £ on altgr+3
-EU € on altgr+e
+
+- Swedish åäö on `Lv3+[';`
+- German üß on `Lv3+us`
+- UK £ on `Lv3+3`
+- EU € on `Lv3+e`
+- Cyrillic alphabet on `Lv5`
+- Caps Lock as Control (`ctrl`)
+
+
+- Level 3 chooser is Alt-Gr (`ralt_switch`)
+- Level 5 chooser is Lesser/Greater than (`lsgt_switch`)
 
 
 How to install
 ===
 1. Add the file "seba" to `/usr/share/X11/xkb/symbols/`
 
-        $   sudo cp seba /usr/share/X11/xkb/symbols/
+        $  sudo ln -s seba /usr/share/X11/xkb/symbols/
 
 2. There is a number of files to modify in `/usr/share/X11/xkb/rules/`
    in file `base.lst`
@@ -36,6 +43,6 @@ How to install
 
 3. Logout + login.
 
-4. Choose Seba from "text entry settings"/keyboard layouts
-   or do something like `setxkbmap -layout seba -option ctrl:nocaps -option lv3:ralt_switch`
-   from terminal
+4. Set Seba keyboard layout
+
+        $  setxkbmap -layout seba

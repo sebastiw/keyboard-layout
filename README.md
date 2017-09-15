@@ -6,12 +6,13 @@ This keyboard layout is based on the US layout, but with some special keys:
 - German üß on `Lv3+us`
 - UK £ on `Lv3+3`
 - EU € on `Lv3+e`
-- Cyrillic alphabet on `Lv5`
-- Caps Lock as Control (`ctrl`)
+- Cyrillic alphabet on `Group2`
+- Caps Lock as Control (`Control_L`)
 
 
-- Level 3 chooser is Alt-Gr (`ralt_switch`)
-- Level 5 chooser is Lesser/Greater than (`lsgt_switch`)
+- Level 3 chooser is Alt-Gr (`Alt_R`)
+- Groups are changed with both left and right Controls (goes up or
+  down in group list depending on which one is pressed first)
 
 
 How to install
@@ -46,3 +47,9 @@ How to install
 4. Set Seba keyboard layout
 
         $  setxkbmap -layout seba
+
+
+Resources
+===
+
+https://www.charvolant.org/doug/xkb/html/xkb.html

@@ -37,7 +37,7 @@ xkb_symbols "seba_base" {
     key <AE07> {[	7,	ampersand,	7,		ampersand	]
                };
     key <AE08> {[	8,	asterisk,	8,		asterisk	]
-               ,[	U20BD	]
+               ,[	8,	U20BD	]
                };
     key <AE09> {[	9,	parenleft,	9,		parenleft	]
                };
@@ -147,6 +147,7 @@ xkb_symbols "seba_base" {
                ,[	Cyrillic_yu,		Cyrillic_YU	]
                };
     key <AB10> {[   slash,	question,	slash,		question	]
+               ,[	period,			comma		]
                };
 
     key <BKSL> {[ backslash,	bar,		backslash,	bar		]

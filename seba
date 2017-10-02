@@ -118,6 +118,9 @@ xkb_symbols "seba_base" {
     key <AC11> {[ apostrophe,	quotedbl,	adiaeresis,	Adiaeresis	]
                ,[	Cyrillic_e,		Cyrillic_E	]
                };
+    key <BKSL> {[	backslash,		bar		]
+               ,[	backslash,		question	]
+               };
 
     key <AB01> {[	z,			Z		]
                ,[	Cyrillic_ya,		Cyrillic_YA	]
@@ -148,9 +151,6 @@ xkb_symbols "seba_base" {
                };
     key <AB10> {[	slash,			question	]
                ,[	period,			comma		]
-               };
-
-    key <BKSL> {[	backslash,		bar		]
                };
 };
 

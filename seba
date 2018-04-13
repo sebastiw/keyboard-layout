@@ -72,7 +72,7 @@ xkb_symbols "seba_base" {
     key <AD08> {[	i,			I		]
                ,[	Cyrillic_sha,		Cyrillic_SHA	]
                };
-    key <AD09> {[	o,			O		]
+    key <AD09> {[	o,	O,		ocircumflex,	Ocircumflex	]
                ,[	Cyrillic_shcha,		Cyrillic_SHCHA	]
                };
     key <AD10> {[	p,			P		]

@@ -119,7 +119,7 @@ xkb_symbols "seba_base" {
                ,[	Cyrillic_e,		Cyrillic_E	]
                };
     key <BKSL> {[	backslash,		bar		]
-               ,[	backslash,		question	]
+               ,[	slash,			question	]
                };
 
     key <AB01> {[	z,			Z		]

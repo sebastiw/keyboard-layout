@@ -42,6 +42,10 @@ How to install
         </layout>"
 ```
 
+   I.E.
+   `sed -i '\|! layout|a\  seba\t\t  Seba' /usr/share/X11/xkb/rules/base.lst`
+   `sed -i '\|<layoutList>|a\\t\t<layout>\n\t\t\t<configItem>\n\t\t\t\t<name>seba</name>\n\t\t\t\t<shortDescription>seba</shortDescription>\n\t\t\t\t<description>Seba</description>\n\t\t\t\t<languageList>\n\t\t\t\t\t<iso639Id>eng</iso639Id>\n\t\t\t\t</languageList>\n\t\t\t</configItem>\n\t\t</layout>' /usr/share/X11/xkb/rules/base.xml`
+
 3. Logout + login.
 
 4. Set Seba keyboard layout

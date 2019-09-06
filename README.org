@@ -17,9 +17,9 @@ This keyboard layout is based on the US layout, but with some special keys:
 
 * How to install
 
-1. Add the file "seba" to `/usr/share/X11/xkb/symbols/`
+1. Add the file "seba.x11" to `/usr/share/X11/xkb/symbols/`
 
-        $  sudo ln -s seba /usr/share/X11/xkb/symbols/
+        $  sudo ln -s seba.x11 /usr/share/X11/xkb/symbols/seba
 
 2. There is a number of files to modify in `/usr/share/X11/xkb/rules/`
    in file `base.lst`

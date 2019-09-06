@@ -1,5 +1,5 @@
-About
-===
+* About
+
 This keyboard layout is based on the US layout, but with some special keys:
 
 - Swedish åäö on `Lv3+[';`
@@ -15,8 +15,8 @@ This keyboard layout is based on the US layout, but with some special keys:
   down in group list depending on which one is pressed first)
 
 
-How to install
-===
+* How to install
+
 1. Add the file "seba" to `/usr/share/X11/xkb/symbols/`
 
         $  sudo ln -s seba /usr/share/X11/xkb/symbols/
@@ -53,7 +53,6 @@ How to install
         $  setxkbmap -layout seba
 
 
-Resources
-===
+* Resources
 
 https://www.charvolant.org/doug/xkb/html/xkb.html

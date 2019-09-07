@@ -1,6 +1,8 @@
 * About
 
-This keyboard layout is based on the US layout, but with some special keys:
+There are two keyboard layouts in this repo. One for X11 and one for KBD.
+
+The keyboard layout is based on the US layout, but with some special keys:
 
 - Swedish åäö on `Lv3+[';`
 - German üß on `Lv3+us`
@@ -14,8 +16,7 @@ This keyboard layout is based on the US layout, but with some special keys:
 - Groups are changed with both left and right Controls (goes up or
   down in group list depending on which one is pressed first)
 
-
-* How to install
+* How to install the layout under X11
 
 1. Add the file "seba.x11" to `/usr/share/X11/xkb/symbols/`
 
@@ -52,7 +53,21 @@ This keyboard layout is based on the US layout, but with some special keys:
 
         $  setxkbmap -layout seba
 
+* How to install the layout (keymap) under KBD
+
+1. Make sure the `/kbd/keymaps` directory exist
+   `mkdir -p /usr/local/share/kbd/keymaps`
+
+2. Copy `seba.kbd` to it
+   `ln -s seba.kbd /usr/local/share/kbd/keymaps/seba`
+
+3. Testing it out
+   `loadkeys /usr/local/share/kbd/keymaps/seba`
+
+3. For persistent usage
+   `localectl set-keymap --no-convert seba`
 
 * Resources
 
 https://www.charvolant.org/doug/xkb/html/xkb.html
+https://jlk.fjfi.cvut.cz/arch/manpages/man/keymaps.5

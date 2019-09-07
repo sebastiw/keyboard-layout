@@ -1,0 +1,125 @@
+charset "iso-8859-15"
+
+
+# Modifier      Weight
+# -------       -----
+# Shift         1
+# AltGr         2
+# Control       4
+# Alt           8
+# ShiftL        16
+# ShiftR        32
+# CtrlL         64
+# CtrlR         128
+# CapsShift     256
+
+# Only define weights for:
+# plain, shift, altgr, altgr+shift, ctrl, ctrl+shift
+keymaps 0-5
+
+alt_is_meta
+strings as usual
+
+keycode   1 = Escape
+keycode  14 = Delete
+
+keycode  41 = grave           asciitilde
+#  control keycode  41 = U+0451  U+0401          # CYRILLIC IO
+keycode   2 = one             exclam
+keycode   3 = two             at
+keycode   4 = three           numbersign       sterling
+keycode   5 = four            dollar
+keycode   6 = five            percent
+keycode   7 = six             asciicircum
+keycode   8 = seven           ampersand
+keycode   9 = eight           asterisk
+#  control keycode   9 = eight       U+20BD
+keycode  10 = nine            parenleft
+keycode  11 = zero            parenright
+keycode  12 = minus           underscore
+keycode  13 = equal           plus
+
+
+keycode  15 = Tab
+  shift keycode  15 = Meta_Tab
+keycode  16 = q               Q
+#  control keycode  16 = U+0439  U+0419          # CYRILLIC SHORT I
+keycode  17 = w               W
+#  control keycode  17 = U+0446  U+0426          # CYRILLIC TSE
+keycode  18 = e               E                 euro
+#  control keycode  18 = U+0443  U+0423          # CYRILLIC U
+keycode  19 = r               R
+#  control keycode  19 = U+043A  U+041A          # CYRILLIC KA
+keycode  20 = t               T
+#  control keycode  20 = U+0435  U+0415          # CYRILLIC IE
+keycode  21 = y               Y
+#  control keycode  21 = U+043D  U+041D          # CYRILLIC EN
+keycode  22 = u               U                 udiaeresis      Udiaeresis
+#  control keycode  22 = U+0433  U+0413          # CYRILLIC GHE
+keycode  23 = i               I
+#  control keycode  23 = U+0448  U+0428          # CYRILLIC SHA
+keycode  24 = o               O
+#  control keycode  24 = U+0449  U+0429          # CYRILLIC SHCHA
+keycode  25 = p               P
+#  control keycode  25 = U+0437  U+0417          # CYRILLIC ZE
+keycode  26 = bracketleft     braceleft         aring           Aring
+#  control keycode  26 = U+0445  U+0425          # CYRILLIC HA
+keycode  27 = bracketright    braceright        asterisk
+#  control keycode  27 = U+044A  U+042A          # CYRILLIC HARD SIGN
+keycode  28 = Return
+
+keycode  58 = Control
+keycode  30 = a               A
+#  control keycode  30 = U+0444  U+0424          # CYRILLIC EF
+keycode  31 = s               S                 ssharp
+#  control keycode  31 = U+044B  U+042B          # CYRILLIC YERU
+keycode  32 = d               D
+#  control keycode  32 = U+0432  U+0412          # CYRILLIC VE
+keycode  33 = f               F
+#  control keycode  33 = U+0430  U+0410          # CYRILLIC A
+keycode  34 = g               G
+#  control keycode  34 = U+043F  U+041F          # CYRILLIC PE
+keycode  35 = h               H
+#  control keycode  35 = U+0440  U+0420          # CYRILLIC ER
+keycode  36 = j               J
+#  control keycode  36 = U+043E  U+041E          # CYRILLIC O
+keycode  37 = k               K
+#  control keycode  37 = U+043B  U+041B          # CYRILLIC EL
+keycode  38 = l               L
+#  control keycode  38 = U+0434  U+0414          # CYRILLIC DE
+keycode  39 = semicolon       colon             odiaeresis       Odiaeresis
+#  control keycode  39 = U+0436  U+0416          # CYRILLIC ZHE
+keycode  40 = apostrophe      quotedbl          adiaeresis       Adiaeresis
+#  control keycode  40 = U+044D  U+042D          # CYRILLIC E
+keycode  43 = backslash       bar
+#  control keycode  43 = slash          question
+
+keycode  42 = Shift
+keycode  86 = less            greater          bar
+keycode  44 = z               Z
+#  control keycode  44 =  U+044F  U+042F          # CYRILLIC YA
+keycode  45 = x               X
+#  control keycode  45  = U+0447  U+0427          # CYRILLIC CHE
+keycode  46 = c               C
+#  control keycode  46  = U+0441  U+0421          # CYRILLIC ES
+keycode  47 = v               V
+#  control keycode  47  = U+043C  U+041C          # CYRILLIC EM
+keycode  48 = b               B
+#  control keycode  48  = U+0438  U+0418          # CYRILLIC I
+keycode  49 = n               N
+#  control keycode  49  = U+0442  U+0422          # CYRILLIC TE
+keycode  50 = m               M
+#  control keycode  50  = U+044C  U+042C          # CYRILLIC SOFT SIGN
+keycode  51 = comma           less
+#  control keycode  51  = U+0431  U+0411          # CYRILLIC BE
+keycode  52 = period          greater
+#  control keycode  52  = U+044E  U+042E          # CYRILLIC YU
+keycode  53 = slash           question
+#  control keycode  53 = period          comma
+keycode  54 = Shift
+
+keycode  29 = Control
+keycode  56 = Alt
+keycode  57 = space
+
+keycode  97 = Control

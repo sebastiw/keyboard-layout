@@ -1,6 +1,6 @@
 * About
 
-There are two keyboard layouts in this repo. One for X11 and one for KBD.
+There are two keyboard layouts in this repo. One for X11/XKB and one for KBD.
 
 The keyboard layout is based on the US layout, but with some special keys:
 
@@ -8,19 +8,21 @@ The keyboard layout is based on the US layout, but with some special keys:
 - German üß on `Lv3+us`
 - UK £ on `Lv3+3`
 - EU € on `Lv3+e`
-- Cyrillic alphabet on `Group2`
+- Cyrillic alphabet on `Group2` (Not included in KBD variant)
 - Caps Lock as Control (`Control_L`)
 
 
 - Level 3 chooser is Alt-Gr (`Alt_R`)
 - Groups are changed with both left and right Controls (goes up or
-  down in group list depending on which one is pressed first)
+  down in group list depending on which one is pressed first) (Not included in KBD variant)
 
 * How to install the layout under X11
 
 1. Add the file "seba.x11" to `/usr/share/X11/xkb/symbols/`
 
-        $  sudo ln -s seba.x11 /usr/share/X11/xkb/symbols/seba
+#+BEGIN_SRC sh
+  $  sudo ln -s `pwd`/seba.x11 /usr/share/X11/xkb/symbols/seba
+#+END_SRC
 
 2. There is a number of files to modify in `/usr/share/X11/xkb/rules/`
    in file `base.lst`
@@ -30,7 +32,7 @@ The keyboard layout is based on the US layout, but with some special keys:
    in file `base.xml`
    where `<layoutList>` begins
    add
-```
+#+BEGIN_EXAMPLE
        <layout>
           <configItem>
             <name>seba</name>
@@ -40,34 +42,52 @@ The keyboard layout is based on the US layout, but with some special keys:
               <iso639Id>eng</iso639Id>
             </languageList>
           </configItem>
-        </layout>"
-```
+        </layout>
+#+END_EXAMPLE
 
    I.E.
-   `sed -i '\|! layout|a\  seba\t\t  Seba' /usr/share/X11/xkb/rules/base.lst`
-   `sed -i '\|<layoutList>|a\\t\t<layout>\n\t\t\t<configItem>\n\t\t\t\t<name>seba</name>\n\t\t\t\t<shortDescription>seba</shortDescription>\n\t\t\t\t<description>Seba</description>\n\t\t\t\t<languageList>\n\t\t\t\t\t<iso639Id>eng</iso639Id>\n\t\t\t\t</languageList>\n\t\t\t</configItem>\n\t\t</layout>' /usr/share/X11/xkb/rules/base.xml`
+#+BEGIN_SRC sh
+  sed -i '\|! layout|a\  seba\t\t  Seba' /usr/share/X11/xkb/rules/base.lst
+
+  sed -i '\|<layoutList>|a\\t\t<layout>\n\t\t\t<configItem>\n\t\t\t\t<name>seba</name>\n\t\t\t\t<shortDescription>seba</shortDescription>\n\t\t\t\t<description>Seba</description>\n\t\t\t\t<languageList>\n\t\t\t\t\t<iso639Id>eng</iso639Id>\n\t\t\t\t</languageList>\n\t\t\t</configItem>\n\t\t</layout>' /usr/share/X11/xkb/rules/base.xml
+#+END_SRC
 
 3. Logout + login.
 
 4. Set Seba keyboard layout
 
-        $  setxkbmap -layout seba
+#+BEGIN_SRC sh
+  $  setxkbmap -layout seba
+#+END_SRC
 
 * How to install the layout (keymap) under KBD
 
 1. Make sure the `/kbd/keymaps` directory exist
-   `mkdir -p /usr/local/share/kbd/keymaps`
+
+#+BEGIN_SRC sh
+   mkdir -p /usr/local/share/kbd/keymaps
+#+END_SRC
 
 2. Copy `seba.kbd` to it
-   `ln -s seba.kbd /usr/local/share/kbd/keymaps/seba`
+
+#+BEGIN_SRC sh
+  ln -s `pwd`/seba.kbd /usr/local/share/kbd/keymaps/seba
+#+END_SRC
 
 3. Testing it out
-   `loadkeys /usr/local/share/kbd/keymaps/seba`
+
+#+BEGIN_SRC sh
+  loadkeys /usr/local/share/kbd/keymaps/seba
+#+END_SRC
 
 3. For persistent usage
-   `localectl set-keymap --no-convert seba`
+
+#+BEGIN_SRC sh
+  localectl set-keymap --no-convert /usr/local/share/kbd/keymaps/seba
+#+END_SRC
 
 * Resources
 
 https://www.charvolant.org/doug/xkb/html/xkb.html
+
 https://jlk.fjfi.cvut.cz/arch/manpages/man/keymaps.5

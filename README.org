@@ -1,36 +1,38 @@
 * About
 
 There are two keyboard layouts in this repo. One for X11/XKB and one for KBD.
+XKB is the one you would usually want.
+KBD is for ttys and terminals without graphics.
 
 The keyboard layout is based on the US layout, but with some special keys:
 
-- Swedish åäö on `Lv3+[';`
-- German üß on `Lv3+us`
-- UK £ on `Lv3+3`
-- EU € on `Lv3+e`
-- Cyrillic alphabet on `Group2` (Not included in KBD variant)
-- Caps Lock as Control (`Control_L`)
+- Swedish åäö on =Lv3+[';=
+- German üß on =Lv3+us=
+- UK £ on =Lv3+3=
+- EU € on =Lv3+e=
+- Cyrillic alphabet on =Group2= (Not included in KBD variant)
+- Caps Lock as Control (=Control_L=)
 
 
-- Level 3 chooser is Alt-Gr (`Alt_R`)
+- Level 3 chooser is Alt-Gr (=Alt_R=)
 - Groups are changed with both left and right Controls (goes up or
   down in group list depending on which one is pressed first) (Not included in KBD variant)
 
 * How to install the layout under X11
 
-1. Add the file "seba.x11" to `/usr/share/X11/xkb/symbols/`
+1. Add the file ~seba.x11~ to ~/usr/share/X11/xkb/symbols/~
 
 #+BEGIN_SRC sh
   $  sudo ln -s `pwd`/seba.x11 /usr/share/X11/xkb/symbols/seba
 #+END_SRC
 
-2. There is a number of files to modify in `/usr/share/X11/xkb/rules/`
-   in file `base.lst`
-   after the line where it says: `! layout`
-   add a line `seba Seba`
+2. There is a number of files to modify in ~/usr/share/X11/xkb/rules/~
+   in file ~base.lst~
+   after the line where it says: "! layout"
+   add a line "seba Seba"
 
-   in file `base.xml`
-   where `<layoutList>` begins
+   in file ~base.xml~
+   where "<layoutList>" begins,
    add
 #+BEGIN_EXAMPLE
        <layout>
@@ -62,13 +64,13 @@ The keyboard layout is based on the US layout, but with some special keys:
 
 * How to install the layout (keymap) under KBD
 
-1. Make sure the `/kbd/keymaps` directory exist
+1. Make sure the ~/usr/local/share/kbd/keymaps~ directory exist
 
 #+BEGIN_SRC sh
    mkdir -p /usr/local/share/kbd/keymaps
 #+END_SRC
 
-2. Copy `seba.kbd` to it
+2. Copy ~seba.kbd~ to it
 
 #+BEGIN_SRC sh
   ln -s `pwd`/seba.kbd /usr/local/share/kbd/keymaps/seba

@@ -20,13 +20,13 @@ The keyboard layout is based on the US layout, but with some special keys:
 
 * How to install the layout under XKB
 
-1. Add the file ~seba.x11~ to ~\~/.config/xkb/symbols/~
+1. Add the file -seba.x11- to =~/.config/xkb/symbols/=
 
 #+BEGIN_SRC sh
   mkdir -p ~/.config/xkb/symbols && ln -s `pwd`/seba.x11 ~/.config/xkb/symbols/seba
 #+END_SRC
 
-2. Add the file ~evdev.xml~ to ~\~/.config/xkb/rules/~
+2. Add the file =evdev.xml= to =~/.config/xkb/rules/=
 #+BEGIN_SRC sh
   mkdir -p ~/.config/xkb/rules && ln -s `pwd`/evdev.xml ~/.config/xkb/rules/
 #+END_SRC
@@ -41,7 +41,7 @@ The keyboard layout is based on the US layout, but with some special keys:
 
 * How to install the layout (keymap) under KBD
 
-1. Copy ~seba.kbd~ to ~/usr/local/share/kbd/keymaps~
+1. Copy =seba.kbd= to =/usr/local/share/kbd/keymaps=
 
 #+BEGIN_SRC sh
   mkdir -p /usr/local/share/kbd/keymaps && ln -s `pwd`/seba.kbd /usr/local/share/kbd/keymaps/seba
@@ -57,6 +57,22 @@ The keyboard layout is based on the US layout, but with some special keys:
 
 #+BEGIN_SRC sh
   localectl set-keymap --no-convert /usr/local/share/kbd/keymaps/seba
+#+END_SRC
+
+* Visualize
+
+1. install =xorg-xkbprint=
+
+2. Add the file -seba.geometry- to =~/.config/xkb/geometry/=
+
+#+BEGIN_SRC sh
+  mkdir -p ~/.config/xkb/geometry && ln -s `pwd`/seba.geometry ~/.config/xkb/geometry/seba
+#+END_SRC
+
+3. Generate PDF
+
+#+BEGIN_SRC sh
+  setxkbmap -layout seba -geometry 'seba' -print | xkbcomp -I/home/seba/.config/xkb - - | xkbprint -ll 2  - - | ps2pdf - > seba.pdf
 #+END_SRC
 
 * Resources

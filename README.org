@@ -20,13 +20,13 @@ The keyboard layout is based on the US layout, but with some special keys:
 
 * How to install the layout under XKB
 
-1. Add the file ~seba.x11~ to ~~/xkb/symbols/~
+1. Add the file ~seba.x11~ to ~\~/.config/xkb/symbols/~
 
 #+BEGIN_SRC sh
   mkdir -p ~/.config/xkb/symbols && ln -s `pwd`/seba.x11 ~/.config/xkb/symbols/seba
 #+END_SRC
 
-2. Add the file ~evdev.xml~ to ~~/xkb/rules/~
+2. Add the file ~evdev.xml~ to ~\~/.config/xkb/rules/~
 #+BEGIN_SRC sh
   mkdir -p ~/.config/xkb/rules && ln -s `pwd`/evdev.xml ~/.config/xkb/rules/
 #+END_SRC
@@ -61,5 +61,6 @@ The keyboard layout is based on the US layout, but with some special keys:
 
 * Resources
 
+[[https://who-t.blogspot.com/2020/09/user-specific-xkb-configuration-putting.html][P. Hutterer blog post: User-specific XKB configuration]]
 [[https://linux.die.net/man/5/keymaps][man keymaps]]
 [[https://linux.die.net/man/7/xkeyboard-config][man xkeyboard-config]]

@@ -5,7 +5,6 @@ default
 partial alphanumeric_keys modifier_keys
 xkb_symbols "seba" {
 
-    include "seba(seba_base)"
     name[Group1]="Seba";
 
     include "ctrl(nocaps)"
@@ -14,6 +13,8 @@ xkb_symbols "seba" {
     // include "grp(ctrls_toggle)"
 
     modifier_map Mod5 { ISO_Level3_Shift, Mode_switch };
+
+    include "seba(seba_base)"
 };
 
 partial alphanumeric_keys
@@ -22,7 +23,6 @@ xkb_symbols "seba_base" {
     include "eurosign(e)"
 
     key <AE03> {[	any,	any,		sterling	] // sterling
-               };
                };
     key <AD07> {[	any,	any,		udiaeresis,	Udiaeresis	] // üÜ
                };
